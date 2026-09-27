@@ -514,11 +514,9 @@ Chrome recrée alors les blobs DPAPI imbriqués (blob1 + blob2) et re-chiffre la
 ---
  
 ### 4.6 PoC Execution on Chrome 155
- 
-J'ai trouvé un script très récent d'Alfred Abston qui implémentait l'ensemble de ce mécanisme [chrome-decrypt-offline](https://github.com/aabston/chrome-decrypt-offline) cependant il n'était pas entièrement fonctionnel selon les cas, j'ai aussi implémenté la fonction permettant de déchiffrer les données bancaires stockées sur Chrome comme elles utilisent exactement le même mécanisme de chiffrement que les mots de passe / Cookies.  
 
-Vous pouvez trouver la [Pull Request](https://github.com/aabston/chrome-decrypt-offline/pull/1) détaillant le problème du script originale, sa correction, et les nouvelles implémentations, ainsi que [le script](https://github.com/0rcruxe/chrome-decrypt-offline/blob/main/chrome-decrypt.py) mis à jour et totalement fonctionnel.
- 
+Vous pouvez trouver [l'implémentation du PoC](https://github.com/0rcruxe/chrome-abe-offline-decrypt), couvrant le déchiffrement des credentials classiques (mots de passe, cookies) ainsi que les données bancaires stockées par Chrome (numéros de carte, CVC, IBAN).  
+
 **Prérequis :** avant de commencer il faut d'abord obtenir le secret DPAPI system depuis les hives `SECURITY` ET `SYSTEM` pour déchiffrer la masterkey system :
 
 ![](/assets/img/secret_sys.png)
