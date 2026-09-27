@@ -525,7 +525,7 @@ Vous pouvez trouver [l'implémentation du PoC](https://github.com/0rcruxe/chrome
 Avec toutes les données nécessaire en main, il est maintenant possible de déchiffrer les credentials chrome :
  
 ```bash
-python3 chrome-decrypt.py --decrypt -s "Local State" -l "Login Data" -c Cookies -w 'Web Data'
+python3 chrome_abe_offline_decrypt.py --decrypt -s "Local State" -l "Login Data" -c "Cookies" -w "Web Data"'
 ```
 {: .nolineno }
 
