@@ -327,7 +327,9 @@ Ce résultat démontre ainsi qu'un compte MSA / Entra ID protégé par TPM ne co
 ---
  
 ## 4. Offline Chrome Credentials Decryption
- 
+
+Quelques implémentations de référence m'ont guidé : [Chrome-App-Bound-Encryption-Decryption](https://github.com/xaitax/Chrome-App-Bound-Encryption-Decryption), [runassu/chrome_v20_decryption](https://github.com/runassu/chrome_v20_decryption) et [aabston/chrome-decrypt-offline](https://github.com/aabston/chrome-decrypt-offline) ont principalement servi de base de compréhension pour la chaîne v20.  
+
 Les identifiants Chrome peuvent être protégés par deux mécanismes principaux : `v10`, l'ancien mécanisme de chiffrement, et `v20`, le nouveau mécanisme basé sur l'**App-Bound Encryption (ABE)**, mis en place récemment.
  
 ### 4.1 Before Chrome 127 — v10 Model
