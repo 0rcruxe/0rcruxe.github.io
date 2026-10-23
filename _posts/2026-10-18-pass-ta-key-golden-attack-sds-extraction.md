@@ -63,7 +63,7 @@ On disk, Chrome stores GPM synced passkeys in its sync folder:
 LocalAppData\Google\Chrome\User Data\<Profile>\Sync Data\LevelDB
 ```
 
-These records are encoded in protobuf under the **`WebauthnCredentialSpecifics`** format. Each record contains the linked site (rp_id), the username, the user identifier (User ID corresponding to the WebAuthn userHandle), and an Encrypted field: the passkey's ECDSA private key, encrypted as a blob with the SDS.
+These records are encoded in protobuf under the **`WebauthnCredentialSpecifics`** format. Each record contains the linked site (`rp_id`), the username, the user identifier (`User ID` corresponding to the `WebAuthn userHandle`), and an `Encrypted` field: the passkey's ECDSA private key, encrypted as a blob with the SDS.
 
 Access to these records does not require elevated privileges. Malware running with standard user rights can exfiltrate the necessary folder.
 
