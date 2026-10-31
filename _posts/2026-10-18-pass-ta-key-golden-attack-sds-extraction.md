@@ -19,7 +19,7 @@ description: "Part 1 of a technical deep-dive into the Pass-ta-key Golden Attack
 Passkeys are presented as the future of authentication. By replacing passwords with a cryptographic key pair, they promise to eliminate phishing and credential theft.
 Paradoxically, this robustness becomes a vector for total compromise in the hands of an attacker. With a stolen password, MFA remains a last line of defense. With a passkey private key, there is nothing left to bypass: the key is the authentication factor. No MFA, no SMS code, no push notification, the generated WebAuthn assertion is cryptographically valid and indistinguishable from a legitimate authentication.
 
-**Google Password Manager (GPM)** adopts this model for its synced passkeys, compatible with many sites like Amazon, Apple, Microsoft, Binance, GitHub... Synchronization between devices is ensured by the **Cloud Authenticator**. This model introduces an attack surface that can lead to an **Account Takeover (ATO)** attack.
+**Google Password Manager (GPM)** adopts this model for its synced passkeys, compatible with many services like Amazon, Apple, Microsoft, Binance, GitHub... Synchronization between devices is ensured by the **Cloud Authenticator**. This model introduces an attack surface that can lead to an **Account Takeover (ATO)** attack.
 
 In August 2026, Unit 42 (Palo Alto Networks) published an analysis demonstrating that passkey synchronization between devices creates an unexpected attack surface. Their work identifies how malware present on a compromised workstation can hijack the authentication flow to take control of accounts protected by GPM passkeys. This scenario is common to the three types of Pass-ta-key attacks, in increasing order of criticality.
 
