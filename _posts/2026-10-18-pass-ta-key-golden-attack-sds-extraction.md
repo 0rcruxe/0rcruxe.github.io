@@ -473,7 +473,7 @@ You can find the [PoC implementation](https://github.com/0rcruxe/pass-ta-key), c
 
 The PoC was validated on a Windows machine equipped with a TPM (Trusted Platform Module). The attack was successfully reproduced across all current Chrome release channels: Chrome Stable 156, Chrome Dev 158, Chrome Beta 156, and Chrome Canary 158. 
 
-Because this vulnerability exploits an **architectural flaw** rather than a specific implementation bug, it is not tied to a specific Chrome version. Consequently, all versions of Chrome are vulnerable.
+Because this vulnerability exploits an **architectural flaw** rather than a specific implementation bug, it is not tied to a specific Chrome version. Consequently, it affects all versions of Chrome from 129 onward, starting with the introduction of native GPM passkeys on Chrome Desktop. This applies across all release channels, including Stable, Beta, Dev, and Canary.
 
 {% include embed/video.html src='/assets/img/second/sds_extraction_poc.mp4' title='Figure 12: PoC Demonstration: SDS Extraction via sds_extractor.' %}
 
